@@ -13,3 +13,6 @@ C:\Users\9eldi\source\repos\UdpVoiceChat\UdpVoiceChat\obj\Debug\net6.0\refint\Ud
 C:\Users\9eldi\source\repos\UdpVoiceChat\UdpVoiceChat\obj\Debug\net6.0\UdpVoiceChat.pdb
 C:\Users\9eldi\source\repos\UdpVoiceChat\UdpVoiceChat\obj\Debug\net6.0\UdpVoiceChat.genruntimeconfig.cache
 C:\Users\9eldi\source\repos\UdpVoiceChat\UdpVoiceChat\obj\Debug\net6.0\ref\UdpVoiceChat.dll
+C:\Users\9eldi\source\repos\UdpVoiceChat\UdpVoiceChat\bin\Debug\net6.0\NAudio.dll
+C:\Users\9eldi\source\repos\UdpVoiceChat\UdpVoiceChat\bin\Debug\net6.0\System.Resources.Extensions.dll
+C:\Users\9eldi\source\repos\UdpVoiceChat\UdpVoiceChat\obj\Debug\net6.0\UdpVoiceChat.csproj.CopyComplete

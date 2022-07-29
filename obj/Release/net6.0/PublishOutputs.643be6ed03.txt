@@ -3,3 +3,5 @@ C:\Users\9eldi\source\repos\UdpVoiceChat\UdpVoiceChat\bin\Release\net6.0\publish
 C:\Users\9eldi\source\repos\UdpVoiceChat\UdpVoiceChat\bin\Release\net6.0\publish\UdpVoiceChat.deps.json
 C:\Users\9eldi\source\repos\UdpVoiceChat\UdpVoiceChat\bin\Release\net6.0\publish\UdpVoiceChat.runtimeconfig.json
 C:\Users\9eldi\source\repos\UdpVoiceChat\UdpVoiceChat\bin\Release\net6.0\publish\UdpVoiceChat.pdb
+C:\Users\9eldi\source\repos\UdpVoiceChat\UdpVoiceChat\bin\Release\net6.0\publish\NAudio.dll
+C:\Users\9eldi\source\repos\UdpVoiceChat\UdpVoiceChat\bin\Release\net6.0\publish\System.Resources.Extensions.dll

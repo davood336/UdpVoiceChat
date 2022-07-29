@@ -12,17 +12,16 @@ namespace UdpVoiceChat.Audio
 {
     internal class AudioController
     {
-        private WaveIn waveIn;
-        private WaveOut waveOut;
+        private WaveInEvent waveIn;
+        private WaveOutEvent waveOut;
         private BufferedWaveProvider bufferStream;
-        private Thread inThread;
         private UdpController udpController;
         private const int LocalPortVoices = 6666;
 
         public AudioController(UdpController udp)
         {
-            waveIn = new WaveIn();
-            waveOut = new WaveOut();
+            waveIn = new WaveInEvent();
+            waveOut = new WaveOutEvent();
 
             waveIn.WaveFormat = new WaveFormat(8000, 16, 1);
             waveIn.DataAvailable += VoiceInput;
