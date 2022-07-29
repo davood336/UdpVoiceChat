@@ -10,7 +10,7 @@ namespace UdpVoiceChat.udp
 {
     internal class UdpController
     {
-        private const int LocalPort = 7777;
+        private const int LocalPortMessages = 7777;
 
         private UdpClient client;
 
@@ -18,8 +18,7 @@ namespace UdpVoiceChat.udp
         {
             client = new UdpClient();
 
-            String[] ip_port = ip.Split(':');
-            client.Connect(IPAddress.Parse(ip_port[0]), Int32.Parse(ip_port[1]));
+            client.Connect(IPAddress.Parse(ip), LocalPortMessages);
 
             new Thread(new ThreadStart(ReceiveMessage)).Start();
         }
@@ -30,9 +29,14 @@ namespace UdpVoiceChat.udp
             client.Send(data);
         }
 
+        public void Send(byte[] voice)
+        {
+            client.Send(voice);
+        }
+
         private void ReceiveMessage()
         {
-            UdpClient receiver = new UdpClient(LocalPort);
+            UdpClient receiver = new UdpClient(LocalPortMessages);
 
             IPEndPoint remoteIp = null;
 
@@ -54,5 +58,7 @@ namespace UdpVoiceChat.udp
                 receiver.Close();
             }
         }
+
+       
     }
 }

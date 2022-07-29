@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "qwXhXb/6WmZJV//CJPk9bmVJYdAQUblSgXnJCxja69RmC6Ig/qXz+0YymMkynzbHrgvp9z3IyjPUL73paUKp8g==",
+  "dgSpecHash": "CbYl5nml4I9/ZkxBmkyBEx71LoMU9fkd+yAI/lnqhdPHtQoTIyseoDHpK2lC4NxRyTO7VY51+d1gIzXcD0M36A==",
   "success": true,
   "projectFilePath": "C:\\Users\\9eldi\\source\\repos\\UdpVoiceChat\\UdpVoiceChat\\UdpVoiceChat.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\9eldi\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\9eldi\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\9eldi\\.nuget\\packages\\naudio\\1.10.0\\naudio.1.10.0.nupkg.sha512",
+    "C:\\Users\\9eldi\\.nuget\\packages\\system.resources.extensions\\4.7.0\\system.resources.extensions.4.7.0.nupkg.sha512",
+    "C:\\Users\\9eldi\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\9eldi\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }
