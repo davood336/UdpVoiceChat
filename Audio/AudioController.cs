@@ -20,7 +20,9 @@ namespace UdpVoiceChat.Audio
 
         public AudioController(UdpController udp)
         {
+            udpController = udp;
             waveIn = new WaveInEvent();
+
             waveOut = new WaveOutEvent();
 
             waveIn.WaveFormat = new WaveFormat(8000, 16, 1);
@@ -29,6 +31,28 @@ namespace UdpVoiceChat.Audio
             bufferStream = new BufferedWaveProvider(new WaveFormat(8000, 16, 1));
             waveOut.Init(bufferStream);
             new Thread(new ThreadStart(ReceiveVoice)).Start();
+
+
+            for (int deviceId = 0; deviceId < WaveIn.DeviceCount; deviceId++)
+            {
+                var deviceInfo = WaveIn.GetCapabilities(deviceId);
+                Console.WriteLine(deviceId + ": " + deviceInfo.ProductName);
+            }
+            Console.WriteLine();
+            for (int deviceId = 0; deviceId < WaveOut.DeviceCount; deviceId++)
+            {
+                var deviceInfo = WaveOut.GetCapabilities(deviceId);
+                Console.WriteLine(deviceId + ": " + deviceInfo.ProductName);
+            }
+            Console.WriteLine();
+            Console.Write("Введите номер микрофона, а затем номер динамиков через пробел, например, \"0 0\": ");
+            var readDevices = Console.ReadLine();
+            string[] splitDevices = readDevices.Split(" ");
+            waveIn.DeviceNumber = Int32.Parse(splitDevices[0]);
+            waveOut.DeviceNumber = Int32.Parse(splitDevices[1]);
+            Console.WriteLine(waveIn.DeviceNumber);
+            Console.WriteLine(waveOut.DeviceNumber);
+            Console.WriteLine(waveIn.GetMixerLine());
         }
 
         private void VoiceInput(object sender, WaveInEventArgs e)

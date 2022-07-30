@@ -1,4 +1,5 @@
-﻿using NAudio.Wave;
+﻿using NAudio.CoreAudioApi;
+using NAudio.Wave;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,7 @@ namespace UdpVoiceChat.UI
 
             AudioController audioController = new AudioController(udp);
 
-            while(true)
+            while (true)
             {
                 udp.Send(Console.ReadLine());
             }
