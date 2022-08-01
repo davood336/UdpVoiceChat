@@ -27,6 +27,7 @@ namespace UdpVoiceChat.Audio
 
             waveIn.WaveFormat = new WaveFormat(8000, 16, 1);
             waveIn.DataAvailable += VoiceInput;
+            waveIn.StartRecording();
 
             bufferStream = new BufferedWaveProvider(new WaveFormat(8000, 16, 1));
             waveOut.Init(bufferStream);
@@ -50,9 +51,6 @@ namespace UdpVoiceChat.Audio
             string[] splitDevices = readDevices.Split(" ");
             waveIn.DeviceNumber = Int32.Parse(splitDevices[0]);
             waveOut.DeviceNumber = Int32.Parse(splitDevices[1]);
-            Console.WriteLine(waveIn.DeviceNumber);
-            Console.WriteLine(waveOut.DeviceNumber);
-            Console.WriteLine(waveIn.GetMixerLine());
         }
 
         private void VoiceInput(object sender, WaveInEventArgs e)
@@ -80,7 +78,6 @@ namespace UdpVoiceChat.Audio
                 while (true)
                 {
                     byte[] data = receiver.Receive(ref remoteIp);
-
                     bufferStream.AddSamples(data, 0, data.Length);
                 }
             }
